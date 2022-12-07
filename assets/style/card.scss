@@ -1,0 +1,144 @@
+div.card{
+    width: 30vw;
+    height: 40vw;
+    background: $white;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .25s ease;
+    backface-visibility: hidden;
+
+    &:hover{
+        transform: scale(.9);
+
+        &::after{
+            height: 28vw;
+        }
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 15vw;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+        z-index: 20;
+        transition: all .25s ease;
+    }
+}
+
+div.card:hover div.descriptionCard p{
+    margin-bottom: 0;
+    opacity: 1;
+}
+
+div.card:hover img{
+    transform: scale(1.25);
+}
+
+div.card:hover ul{
+    transform: translate(0);
+    opacity: 1;
+}
+
+div.card img{
+    height: 100%;
+    z-index: 10;
+    transition: all .25s ease;
+}
+
+div.card div.descriptionCard{
+    z-index: 30;
+    position: absolute;
+    bottom: 0;
+    color: $white;
+    padding: 2vw;
+    padding-bottom: 3vw;
+}
+
+div.card div.descriptionCard p{
+    font-size: .8rem;
+    opacity: 0;
+    margin-bottom: -17vw;
+    transition: all .25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+div.card div.descriptionCard p button{
+    padding: .7vw 1.7vw;
+    border-radius: 1.2vw;
+    background: transparent;
+    border: 2px solid $white;
+    color: $white;
+    margin-top: -1vw;
+    margin-left: auto;
+    cursor: pointer;
+    transition: all .25s ease;
+    font-family: poppins;
+    font-size: .75rem;
+    outline: none;
+
+    &:hover{
+        background: $white;
+        color: $black;
+    }
+}
+
+div.card ul{
+    position: absolute;
+    right: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 40;
+    border-radius: 1.4vw;
+    padding-left: 0;
+    padding-top: .8vw;
+    padding-bottom: .8vw;
+    top: 0;
+    opacity: 0;
+    transform: translate(100%);
+    transition: all .25s ease;
+}
+
+div.card ul li{
+    background: $white;
+    list-style: none;
+    width: 4vw;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .7;
+    transition: all .25s ease;
+    backface-visibility: hidden;
+
+    &:last-child{
+        border-radius: 0 0 1.2vw 1.2vw;
+    }
+
+    &:first-child{
+        border-radius: 1.2vw 1.2vw 0 0;
+    }
+
+    &:hover{
+        opacity: 1;
+        transform: translate(-.7vw, -.4vw);
+        border-radius: .6vw;
+    }
+
+    i{
+        font-size: 1.5vw;
+        color: $black;
+    }
+}

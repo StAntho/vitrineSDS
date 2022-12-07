@@ -1,0 +1,10 @@
+section.scrollZone {
+  overflow-y: scroll;
+}
+
+div.team {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2vw auto;
+}/*# sourceMappingURL=scrollingPage.css.map */

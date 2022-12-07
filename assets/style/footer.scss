@@ -1,0 +1,13 @@
+footer{    
+    background: linear-gradient(to right, $silver, $black);
+    display: flex;
+    justify-content: space-between;
+}
+
+#footerFrame{
+    width: 20vw;
+    height: 23vw;
+    object-fit: fill;
+    outline: none;
+    overflow: hidden;
+}
